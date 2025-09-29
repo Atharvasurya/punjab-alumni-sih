@@ -5,10 +5,12 @@
 [build.environment]
   NODE_VERSION = "18"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[dev]
+  command = "npm run dev"
+  port = 3000
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [context.production]
   command = "npm run build"
